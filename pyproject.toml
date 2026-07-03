@@ -1,0 +1,18 @@
+[project]
+name = "ml-monitoring-lite"
+version = "0.1.0"
+description = "学習時と推論時の分布差を PSI と KS 検定で検出し、データドリフト監視の概念を示す Streamlit アプリ"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.40",
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scipy>=1.11",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
